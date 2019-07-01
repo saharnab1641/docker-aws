@@ -6,4 +6,4 @@ before_install:
   - docker build -t saharnab99/docker-aws -f Dockerfile.dev .
 
 script:
-  - docker run saharnab99/docker-aws npm run test -- --coverage
+  - docker run -e CI=true saharnab99/docker-aws npm run test -- --coverage
